@@ -11,6 +11,12 @@
     <style>
 
       @media screen and (max-width: 768px) {
+        .image-container {
+          width: 50%;
+          display: block;
+          margin: 0 auto;
+        }
+        
         #about li {
           display: block;
           padding-bottom: 10px;
@@ -47,9 +53,9 @@
         display:inline-block;
         *zoom:1; /* hasLayout ie7 trigger */
         vertical-align: top;
-        font-size: 1.1em;
+        font-size: 1.05em;
       }
-
+      
       .center {
         text-align:center;
       }
@@ -76,15 +82,16 @@
       }
 
       .after {
-        font-size: 1.1em;
+        font-size: 0.9em;
         padding: 10px;
+        margin-left: 15px;
       }
 
       .image-container .after {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 90%;
         height: 100%;
         display: none;
         color: #FFF;
@@ -146,19 +153,20 @@
       }
 
       #about {
-        padding-top:60px;
+        padding-top:50px;
         padding-bottom: 20px;
-        height: 100%;
         color: #666666;
-        position: relative;
+        width: 90%;
       }
 
       #about h2 {
-        font-size: 3em;
+        font-size: 2.5em;
       }
 
       #about p {
-        font-size: 1.4em;
+        font-size: 1.2em;
+        padding-left: 40px;
+        padding-right: 40px;
       }
 
       #about .btn {
@@ -170,7 +178,7 @@
 
       #about img {
         border-radius: 50%;
-        max-width: 40%;
+        max-width: 400px;
         height: auto;
         text-align:center;
         display:block;
@@ -184,6 +192,7 @@
         width: 150px;
         background-color: #FF7254;
       }
+
 
       #edtitle h3 {
         color: #FF7254;
@@ -213,11 +222,15 @@
       }
 
       #work img {
-        max-width: 100%;
-        height: 250px;
+        max-width: 220px;
+        height: 200px;
         display: block;
-        margin: 0 auto;
-        position: relative;
+        margin: 0 auto; 
+      }
+      
+      #work {
+        display: block;
+        margin: auto; 
       }
 
       #work hr {
@@ -226,6 +239,7 @@
         width: 150px;
         background-color: #29AA2F;
       }
+
 
       #extra h3 {
         color: #007ACC;
@@ -240,8 +254,8 @@
       }
 
       #row1 img {
-        width: 350px;
-        height: 150px;
+        width: 300px;
+        height: 125px;
         display: block;
         margin: 0 auto;
         position: relative;
@@ -252,17 +266,13 @@
       }
 
       #row2 img {
-        width: 250px;
-        height: auto;
+        width: 225px;
+        height: 175px;
         display: block;
         margin: 0 auto;
         position: relative;
       }
 
-      #gbb img {
-        width: 250px;
-        height: 200px;
-      }
 
       #footer {
         color: #666666;
@@ -311,25 +321,27 @@
     </div>
 
     <div class="container" id="about">
-      <h2 class="center">Daniel Pimentel</h2><br />
-      <img src="Resources/thecitycrop.jpg"> <br /><br />
-      <p class="center">Hey there! Thank you for visiting my website. I hope it gives you a better understanding of who I am. Here's a little background on me.
-        I'm originally from Guayaquil, Ecuador. After living there until the age of four, I moved to Texas. I've spent the vast majority of my life in McAllen, Texas,
-        a small town on the southern tip of the state. I'm currently a junior at The University of Texas at Austin. My goal for summer 2017 is
-        to intern with a tech company in a sales or product management capacity.
-        <br /><br /><span class="bold">Feel free to connect with me below:</span><br /></p>
+      <div class="row">
+        <h2 class="center">Daniel Pimentel</h2><br />
+        <img src="Resources/thecitycrop.jpg"> <br />
+        <p class="center">Hey there! Thank you for visiting my website. I hope it gives you a better understanding of who I am. Here's a little background on me.
+          I'm originally from Guayaquil, Ecuador. After living there until the age of four, I moved to Texas. I've spent the vast majority of my life in McAllen, Texas,
+          a small town on the southern tip of the state. I'm currently a junior at The University of Texas at Austin. My goal for summer 2017 is
+          to intern with a tech company in a sales or product management capacity.
+          <br /><br /><span class="bold">Feel free to connect with me below:</span><br /></p>
 
-      <ul class="list-inline center">
-        <li>
-          <a href="Resources/Daniel_Pimentel_Resume.pdf" class="btn btn-success button" target="_blank">Resume</a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/danielrpimentel" class="btn btn-success button" target="_blank">LinkedIn</a>
-        </li>
-        <li>
-          <a href="mailto:dpimentel.p@utexas.edu" class="btn btn-success button">Email</a>
-        </li>
-      </ul>
+        <ul class="list-inline center">
+          <li>
+            <a href="Resources/Daniel_Pimentel_Resume.pdf" class="btn btn-success button" target="_blank">Resume</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/danielrpimentel" class="btn btn-success button" target="_blank">LinkedIn</a>
+          </li>
+          <li>
+            <a href="mailto:dpimentel.p@utexas.edu" class="btn btn-success button">Email</a>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <div class="container" id="edtitle">
@@ -379,7 +391,7 @@
         </div>
 
         <div class="col-sm-4 image-container center" id="insight">
-          <img src="Resources/insight.png">
+          <img id="work_insight_img" src="Resources/insight.png">
           <div class="after">
             <p>
               <span class="bold">Insight Financial Health</span><br />
